@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Download } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import profileImage from '@/assets/profile.jpeg';
 
 const taglines = [
   'Branding',
@@ -96,13 +97,9 @@ export const HeroSection = () => {
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-accent/20 to-accent/5 p-2">
                 <div className="w-full h-full rounded-full bg-secondary overflow-hidden border-4 border-background shadow-elevated-lg">
                   <img
-                    src="/profile.jpg"
+                    src={profileImage}
                     alt="Dipasmit Ghosh - Head of Branding"
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face';
-                    }}
                   />
                 </div>
               </div>
